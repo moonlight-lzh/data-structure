@@ -50,17 +50,18 @@ void createGraph(OLGraph *G) {
     }
     printf("input arc list:\n");
     VertexType v1, v2;
+    InfoType info;
     int m, n;
     struct ArcNode *node;
     for (int i = 0; i < G->arcnum; ++i) {
-        scanf("%c%c", &v1, &v2);
+        scanf("%c %c %d", &v1, &v2, &info);
         // 定位弧的起点和终点
         m = locateVex(*G, v1);
         n = locateVex(*G, v2);
         node = (struct ArcNode *) malloc(sizeof(struct ArcNode));
         node->headvex = m;      // 弧的起点
         node->tailvex = n;      // 弧的终点
-        node->info = 1;
+        node->info = info;      // 弧上权值
         // 头插法
         node->hlink = G->xlist[m].firstin;
         node->tlink = G->xlist[n].firstout;

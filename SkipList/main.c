@@ -16,12 +16,12 @@ int _val = 0;
 /// </summary>
 void sk_list_menu() {
     printf("--------------Menu--------------\n");
-    printf("		1 - Insert Data\n");
-    printf("		2 - Delete Data\n");
-    printf("		3 - Update Data\n");
-    printf("		4 - Search Data\n");
-    printf("		5 - Print SkipList\n");
-    printf("		0 - Exit System\n");
+    printf("        1 - Insert Data\n");
+    printf("        2 - Delete Data\n");
+    printf("        3 - Update Data\n");
+    printf("        4 - Search Data\n");
+    printf("        5 - Print SkipList\n");
+    printf("        0 - Exit System\n");
     printf("--------------------------------\n");
 }
 
@@ -91,7 +91,7 @@ void update_data() {
 /// </summary>
 void search_data() {
     int key, value;
-    printf("Input Key£º\n");
+    printf("Input KeyÂ£Âº\n");
     scanf("%d", &key);
     bool success = SL_SearchNode(list, key, &value);
     if (success) {

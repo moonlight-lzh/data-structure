@@ -7,23 +7,23 @@
 #include <time.h>
 
 /// <summary>
-/// ½áµãÖĞ¼üµÄÀàĞÍ
+/// ç»“ç‚¹ä¸­é”®çš„ç±»å‹
 /// </summary>
 typedef int KeyType;
 
 /// <summary>
-/// ½áµãÖĞÖµµÄÀàĞÍ
+/// ç»“ç‚¹ä¸­å€¼çš„ç±»å‹
 /// </summary>
 typedef int ValueType;
 
-/// ×î´ó²ãÊı
+/// æœ€å¤§å±‚æ•°
 #define MAX_LEVEL 8
 
-/// ´´½¨½áµã
+/// åˆ›å»ºç»“ç‚¹
 #define  NEW_NODE(n)((SLNode*)((SLNode*)malloc(sizeof(SLNode) + n * sizeof(SLNode*))))
 
 /// <summary>
-/// Ìø±í½áµã
+/// è·³è¡¨ç»“ç‚¹
 /// </summary>
 typedef struct _Node {
     KeyType key;
@@ -32,7 +32,7 @@ typedef struct _Node {
 } SLNode;
 
 /// <summary>
-/// Ìø±í½á¹¹Ìå
+/// è·³è¡¨ç»“æ„ä½“
 /// </summary>
 typedef struct _SkipList {
     int level;
@@ -41,13 +41,12 @@ typedef struct _SkipList {
 
 /*********************************** Definitions ***********************************/
 
-int SL_RandomLevel();                                    // Ëæ»úÉú³É²ãÊı
-SkipList *SL_CreateList();                                // ´´½¨Ìø±í
-void SL_DestroyList(SkipList *);                            // Ïú»ÙÌø±í
-SLNode *SL_CreateNode(int, KeyType, ValueType);            // ´´½¨½áµã
-bool SL_InsertNode(SkipList *, KeyType, ValueType);        // ²åÈë
-bool SL_DeleteNode(SkipList *, KeyType, ValueType *);        // É¾³ı
-bool SL_SearchNode(SkipList *, KeyType, ValueType *);        // ²éÑ¯
-
+int SL_RandomLevel();                                    // éšæœºç”Ÿæˆå±‚æ•°
+SkipList *SL_CreateList();                                // åˆ›å»ºè·³è¡¨
+void SL_DestroyList(SkipList *);                            // é”€æ¯è·³è¡¨
+SLNode *SL_CreateNode(int, KeyType, ValueType);            // åˆ›å»ºç»“ç‚¹
+bool SL_InsertNode(SkipList *, KeyType, ValueType);        // æ’å…¥
+bool SL_DeleteNode(SkipList *, KeyType, ValueType *);        // åˆ é™¤
+bool SL_SearchNode(SkipList *, KeyType, ValueType *);        // æŸ¥è¯¢
 
 /*********************************** Definitions ***********************************/

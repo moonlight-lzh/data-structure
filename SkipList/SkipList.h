@@ -25,30 +25,29 @@ typedef int ValueType;
 /// <summary>
 /// 跳表结点
 /// </summary>
-typedef struct _Node
-{
-	KeyType key;
-	ValueType value;
-	struct _Node* next[];
-}SLNode;
+typedef struct _Node {
+    KeyType key;
+    ValueType value;
+    struct _Node *next[];
+} SLNode;
 
 /// <summary>
 /// 跳表结构体
 /// </summary>
 typedef struct _SkipList {
-	int level;
-	SLNode* head;
-}SkipList;
+    int level;
+    SLNode *head;
+} SkipList;
 
 /*********************************** Definitions ***********************************/
 
-int SL_RandomLevel();									// 随机生成层数
-SkipList* SL_CreateList();								// 创建跳表
-void SL_DestroyList(SkipList*);							// 销毁跳表
-SLNode* SL_CreateNode(int, KeyType, ValueType);			// 创建结点
-bool SL_InsertNode(SkipList*, KeyType, ValueType);		// 插入
-bool SL_DeleteNode(SkipList*, KeyType, ValueType*);		// 删除
-bool SL_SearchNode(SkipList*, KeyType, ValueType*);		// 查询
+int SL_RandomLevel();                                    // 随机生成层数
+SkipList *SL_CreateList();                                // 创建跳表
+void SL_DestroyList(SkipList *);                            // 销毁跳表
+SLNode *SL_CreateNode(int, KeyType, ValueType);            // 创建结点
+bool SL_InsertNode(SkipList *, KeyType, ValueType);        // 插入
+bool SL_DeleteNode(SkipList *, KeyType, ValueType *);        // 删除
+bool SL_SearchNode(SkipList *, KeyType, ValueType *);        // 查询
 
-														
+
 /*********************************** Definitions ***********************************/

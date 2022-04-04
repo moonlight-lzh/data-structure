@@ -116,7 +116,6 @@ int main() {
 
     // Create Random List
     for (size_t i = 0; i < 20; i++) {
-        int k = rand() % 100;
         SL_InsertNode(list, rand() % 100, ++_val);
     }
 
